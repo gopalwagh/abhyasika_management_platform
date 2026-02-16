@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+
+.form_page{
+    width: 500px;
+    height: auto;
+    padding: 20px;
+}
+
+.owner-form-container{
+    width: 100%;
+    background-color: #f3ebebd0;
+    border: 1px solid #3431318e;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    padding: 25px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h3{
+    margin: 15px 0 8px;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+label{
+    font-size: 14px;
+    margin: 4px 5px;
+    color: #394652;
+    display: block;
+}
+
+.grid_property{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+
+input,select,textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4facfe;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(79,172,254,0.4);
+}
+
+input,select,textarea {
+    margin-bottom: 11px;
+}
+
+.services {
+    display: grid;
+    grid-auto-flow: column; 
+    gap: 12px;         
+    align-items: center;    
+}
+
+.services label {
+    display: flex;          
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.services input{
+    height: 15px;
+    width: 15px;
+    margin-top: 10px;
+} 
+
+.owner-form-container textarea{
+    height: 60px;
+    resize: none;
+}
+
+.owner-form-container input[type="file"]{
+    background: none;
+    padding-left: 0;
+    color: #ccc;
+}
+
+span {
+    margin-top:5px ;
+    margin-left: 10px;
+    color: green;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #34495e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: translateY(1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .form-container {
+        margin: 15px;
+        padding: 25px;
+    }
+}
+

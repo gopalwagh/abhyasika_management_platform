@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/owner's_form.css">
+</head>
+<body>
+    <div class="main_page form_page" >
+        <div class="owner-form-container" >
+            <h2>Lab Details</h2>
+            <form id="ownerForm" autocomplete="on">
+                <div class="form-grid grid_property">
+                    <div>
+                        <label>Owner Full Name</label>
+                        <input type="text" id="ownerName" name="ownerName" required>
+                    </div>
+                    <div>
+                        <label>Lab Name</label>
+                        <input type="text" id="labName" name="labName" required>
+                    </div>
+                </div>
+                <h3>Seats Details</h3>
+                <div class="total_seats grid_property">
+                    <div>  
+                        <label>Normal Seats</label>
+                        <input type="number" id="totalSeats" name="totalSeats" required>
+                    </div>
+                    <div>
+                        <label>Fees (Per month)</label>
+                        <input type="number" id="fees" name="fees" required>
+                    </div>
+                </div>
+                <div class="premium_seats grid_property">
+                    <div>
+                        <label>Premium Seats</label>
+                        <input type="number" id="premiumSeats" name="premiumSeats">
+                    </div>
+                    <div>
+                        <label>Premium Fees</label>
+                        <input type="number" id="premiumFees" name="premiumFees">
+                    </div>
+                </div>
+                
+                <h3>Services</h3>
+                <div class="services">
+                    <label>Wi-Fi <input type="checkbox" id="wifi" name="wifi"></label>
+                    <label>Power Backup <input type="checkbox" id="power" name="powerBackup"></label>
+                    <label>AC <input type="checkbox" id="ac" name="ac"></label>
+                    <label>Parking <input type="checkbox" id="parking" name="parking"></label>
+                    <label>Drinking Water <input type="checkbox" id="water" name="drinkingWater"></label>
+                </div>
+
+                <h3>Contact</h3>
+                <div class="contact-grid grid_property">
+                    <div>
+                        <label>Email</label><input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label>Phone</label><input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div>
+                        <label>WhatsApp</label><input type="tel" id="whatsapp" name="whatsapp" required>
+                    </div>
+                    <div>
+                        <label>Address</label><textarea id="address" name="address"></textarea>
+                    </div>
+                    
+                </div>
+
+                <div class="file-upload grid_property">
+                    <div>
+                        <label>Lab Photos (1–3)</label>
+                        <input type="file" id="photos" name="photos" multiple>
+                        <span id="photosStatus"></span>
+                    </div>
+                    <div>                       
+                        <label>Owner's Photo</label>
+                        <input type="file" id="ownerPhoto" name="ownerPhoto">
+                        <span id="ownerStatus"></span>
+                    </div>
+                </div>
+
+                <button type="submit">Save Details</button>
+          </form>
+        </div>
+    </div>
+    
+    <script src="../controller/owners_form.js"></script>
+    <script src="../database/owners_lab_data.js"></script>
+</body>
+</html>

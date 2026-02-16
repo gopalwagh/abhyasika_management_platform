@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students_form</title>
+    <link rel="stylesheet" href="../public/students_forms.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Library Admission Form</h2>
+        <form>
+
+            <label>Students Full Name</label>
+            <input type="text">
+
+            <div class="age-gender">
+                <div class="field">
+                    <label>Age</label>
+                    <input class="age-number" type="number">
+                </div>
+            
+                <div class="field">
+                    <label>Gender</label>
+                    <select required>
+                        <option value="">Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Shift</label>
+                    <select required>
+                        <option>Morning</option>
+                        <option>Evening</option>
+                        <option>Both</option>
+                    </select>
+                </div>
+                <div class="filed">
+                    <label>Fees Check</label>
+                    <select required>
+                        <option>Paid</option>
+                        <option>Remaining</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <div>
+                    <label>Admission Start Date</label>
+                    <input type="date">
+                </div>
+                <div>
+                    <label>End Date</label>
+                    <input type="date">
+                </div>
+                <div>
+                    <label>Education</label>
+                    <input type="text" placeholder="Example: BSc, 12th, Diploma">
+                </div>
+                <div>
+                    <label>Field / Course</label>
+                    <input type="text" placeholder="Example: Engineering, Medical">
+                </div>
+                <div>
+                    <label>Mobile Number</label>
+                    <input type="tel">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" >
+                </div>
+            </div>
+        
+            <label>Address</label>
+            <textarea rows="2"></textarea>
+        
+            <!-- Photo -->
+            <label>Upload Photo</label>
+            <input type="file" accept="image/*">
+    
+            <!-- Submit -->
+            <button type="submit" class="myForm">Submit Admission</button>
+        </form>
+    </div>
+
+    <div class="body_2">
+        <div class="main_container">
+            <div class="after_submission">
+                <h2>✅ Form Submitted Successfully!</h2>
+                <p>Thank you for submitting the library admission form.</p>
+                <p>Your application has been received and is being processed.</p>
+                <button class="after_ok">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../controller/students_details_forms.js"></script>
+</body>
+</html>
