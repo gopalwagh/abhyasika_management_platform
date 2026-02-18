@@ -9,20 +9,18 @@
 <body>
     <div class="form-container">
         <h2>Library Admission Form</h2>
-        <form>
+        <form id="admissionForm">
 
             <label>Students Full Name</label>
-            <input type="text">
-
+            <input type="text" name="fullName">
             <div class="age-gender">
                 <div class="field">
                     <label>Age</label>
-                    <input class="age-number" type="number">
+                    <input class="age-number" type="number" name="age">
                 </div>
-            
                 <div class="field">
                     <label>Gender</label>
-                    <select required>
+                    <select name="gender" required>
                         <option value="">Select</option>
                         <option>Male</option>
                         <option>Female</option>
@@ -31,60 +29,57 @@
                 </div>
                 <div class="field">
                     <label>Shift</label>
-                    <select required>
+                    <select name="shift" required>
                         <option>Morning</option>
                         <option>Evening</option>
                         <option>Both</option>
                     </select>
                 </div>
-                <div class="filed">
+                <div class="field">
                     <label>Fees Check</label>
-                    <select required>
+                    <select name="feesStatus" required>
                         <option>Paid</option>
                         <option>Remaining</option>
                     </select>
                 </div>
             </div>
-
             <div class="grid-container">
                 <div>
                     <label>Admission Start Date</label>
-                    <input type="date">
+                    <input type="date" name="admissionStart">
                 </div>
                 <div>
                     <label>End Date</label>
-                    <input type="date">
+                    <input type="date" name="endDate">
                 </div>
                 <div>
                     <label>Education</label>
-                    <input type="text" placeholder="Example: BSc, 12th, Diploma">
+                    <input type="text" name="education" placeholder="Example: BSc, 12th, Diploma">
                 </div>
                 <div>
                     <label>Field / Course</label>
-                    <input type="text" placeholder="Example: Engineering, Medical">
+                    <input type="text" name="course" placeholder="Example: Engineering, Medical">
                 </div>
                 <div>
                     <label>Mobile Number</label>
-                    <input type="tel">
+                    <input type="tel" name="mobile">
                 </div>
                 <div>
                     <label>Email</label>
-                    <input type="email" >
+                    <input type="email" name="studentEmail">
                 </div>
             </div>
         
             <label>Address</label>
-            <textarea rows="2"></textarea>
+            <textarea rows="2" name="address"></textarea>
         
-            <!-- Photo -->
             <label>Upload Photo</label>
-            <input type="file" accept="image/*">
-    
-            <!-- Submit -->
+            <input type="file" name="photo" accept="image/*">
+        
             <button type="submit" class="myForm">Submit Admission</button>
         </form>
     </div>
-
+    
     <div class="body_2">
         <div class="main_container">
             <div class="after_submission">
@@ -97,5 +92,6 @@
     </div>
 
     <script src="../controller/students_details_forms.js"></script>
+    <script src="../database/owner_data.js"></script>
 </body>
 </html>
